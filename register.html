@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registruj se kod nas!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- jos fontova... -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body >
+    <header class="register-body" id="heder-plana">
+      <nav>
+        <div class="logo">Marko<span style="margin-left: 0.3rem">Gligorijević</span></div>
+        <div class="open"><i class="fas fa-bars"></i></div>
+        <ul class="links">
+          <li id="houm"><a href="index.html" >Home</a></li>
+          <li><a href="index.html#plan">Plan</a></li>
+
+          <li><a href="login.html">Log in</a></li>
+          <li><a href="register.html">Register</a></li>
+          <div class="close"><i class="fas fa-times"></i></div>
+        </ul>
+      </nav>
+    </header>
+    <!-- Start Register -->
+    <section class="register">
+     <img style="background-blend-mode: darken;" id="background-video" autoplay loop muted > 
+        <!--<source src="mages/majica.jpg" type="video/mp4" /> -->
+      </img>
+      <h1>registruj se</h1>
+      <form action="proba.php" method="post">
+        <div class="input_box">
+          <input required name="ime" type="text" placeholder="ime" />
+          <input required name="prezime" type="text" placeholder="prezime" />
+        </div>
+        <div class="input_box">
+          <input reaquired name="email" type="email" placeholder="tvoj email" />
+          <input
+            reaquired
+            name="password"
+            type="password"
+            placeholder="šifra"
+          />
+        </div>
+        <textarea
+          name="text"
+          cols="30"
+          rows="10"
+          placeholder="Poruka ..."
+        ></textarea>
+      
+        <input type="submit" value="Registruj" class="btn" />
+      </form>
+    </section>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

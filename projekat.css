@@ -1,0 +1,896 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+  outline: none;
+}
+
+#naslov {
+  font-size: 46px;
+}
+*::selection {
+  background-color: yellowgreen;
+  color: #fff;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+/* Start Header */
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(./images/stoji.jpg);
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(100% 0, 100% 91%, 49% 100%, 0 89%, 0 0);
+}
+nav {
+  padding: 2% 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+nav .logo {
+  font-size: 3rem;
+  cursor: pointer;
+}
+nav .logo span {
+  color: yellowgreen;
+}
+nav .links {
+  padding-left: 0;
+}
+nav .links li {
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+nav .links li a {
+  color: #fff;
+}
+.links .active {
+  color: yellowgreen;
+}
+nav .links li a:hover {
+  color: yellowgreen;
+}
+header .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+header .content h1 {
+  font-size: 8rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.btn {
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  border: 0.3rem solid yellowgreen;
+  color: yellowgreen;
+  margin-top: 1.8rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+}
+.btn:hover {
+  background-color: yellowgreen;
+  color: #fff;
+}
+nav .open,
+.close {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: yellowgreen;
+  display: none;
+}
+#p-genetika {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  #p-genetika {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 850px) {
+  .uplatnica img {
+    width: 25rem;
+    height: auto;
+  }
+
+  #houm {
+    margin-top: 40%;
+  }
+  #houm a {
+    color: #fff;
+  }
+  nav .links {
+    height: 29rem;
+    width: 36%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-radius: 1.2rem;
+    background-color: yellowgreen;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+  }
+  nav .links li {
+    font-size: 1.9rem;
+    margin: 0.5rem;
+    flex-grow: 1;
+  }
+  nav .links li a {
+    color: #fff;
+    font-family: sans-serif;
+    border-bottom: 1px solid #fff;
+  }
+  nav .links li a:hover {
+    color: #fff;
+    font-size: larger;
+  }
+  nav .open,
+  nav .links .close {
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+  }
+  .close {
+    color: #fff;
+    margin-top: 0%;
+    padding-top: 0%;
+  }
+  header .content h1 {
+    font-size: 6rem;
+  }
+}
+/* Start Trainers */
+.trainers {
+  min-height: 100vh;
+  text-align: center;
+  padding: 2% 6%;
+}
+.trainers h1 {
+  font-size: 3.8rem;
+  padding: 0.5rem;
+  display: inline-block;
+  color: yellowgreen;
+  border-bottom: 0.3rem solid yellowgreen;
+  margin-bottom: 1.8rem;
+}
+.trainers p {
+  font-size: 1.5rem;
+  color: #333;
+}
+.trainers .items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.trainers .items .item {
+  height: 40rem;
+  width: 24rem;
+  margin: 5rem 1rem;
+}
+.trainers .item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.6rem;
+  object-fit: cover;
+}
+.trainers .item .inner {
+  position: relative;
+  z-index: 9999;
+  padding: 0 1rem;
+}
+.trainers .item:hover {
+  transform: translateY(-20px);
+}
+.trainers .item .inner .info {
+  background-color: yellowgreen;
+  padding: 1.2rem 1rem;
+  border-radius: 0.6rem;
+  margin-top: -2.5rem;
+}
+.trainers .item:hover .info {
+  transform: translateY(-30px);
+}
+.trainers .item .inner .info h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  color: #000;
+}
+.trainers .item .inner .info p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #333;
+  margin-top: 0.6rem;
+}
+.trainers .item .inner .info .links {
+  margin-top: 1rem;
+}
+.trainers .item .inner .info .links a {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  background-color: #fff;
+  border-radius: 50%;
+  color: yellowgreen;
+  text-align: center;
+  line-height: 2rem;
+  margin-left: 0.3rem;
+  font-size: 1.1rem;
+}
+.trainers .item .inner .info .links a:hover {
+  box-shadow: 0 0 0.6rem #000;
+}
+/* Start Plan */
+.pricing_table {
+  min-height: 00vh;
+  padding: 2% 6%;
+  text-align: center;
+}
+.pricing_table h1 {
+  font-size: 2.8rem;
+  padding: 0.5rem;
+  display: inline-block;
+  color: yellowgreen;
+  border-bottom: 0.3rem solid yellowgreen;
+  margin-bottom: 2.2rem;
+}
+.pricing_table .pricing_card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.pricing_card .pricing_box {
+  width: 30rem;
+  box-shadow: 2px 2px 6px #000;
+  margin-bottom: 4rem;
+}
+.pricing_card .pricing_box:hover {
+  transform: translateY(-30px);
+}
+.pricing_box h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  background-color: yellowgreen;
+  padding: 1.2rem;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.pricing_box h3 {
+  margin-top: 2rem;
+  font-size: 4rem;
+  color: yellowgreen;
+}
+.pricing_box h3 sup {
+  font-size: 2rem;
+}
+.pricing_box h3 span {
+  font-size: 2.5rem;
+}
+.pricing_box p {
+  font-size: 2.5rem;
+  color: #333;
+}
+.pricing_box ul {
+  padding: 2rem;
+}
+.pricing_box ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+.pricing_box .btn {
+  margin-bottom: 2rem;
+}
+
+#heder-plana {
+  background: rgba(0, 0, 0, 0.1) url("/images/majica-2.pnga");
+  background-size: cover;
+  height: 16rem;
+  background-blend-mode: darken;
+}
+
+/* forma */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.kontejner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: tomato;
+}
+.container {
+  width: 100%;
+  display: flex;
+  max-width: 850px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+.login {
+  width: 400px;
+}
+
+/* about */
+
+.content {
+  flex: 1 1 40rem;
+  padding: 2rem;
+  text-align: center;
+}
+.content h1 {
+  font-size: 3rem;
+  color: yellowgreen;
+  margin-bottom: 5rem;
+}
+
+.content p {
+  line-height: 1.7;
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+footer {
+  color: #fff;
+  padding: 1.5rem;
+
+  background-color: #222;
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
+
+.trening-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video--1 {
+  height: 15rem;
+  width: 25rem;
+  margin: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+.video--1 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.container-containera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video--1 video:hover {
+  transition: 0.2s linear;
+  transform: scale(1.3);
+}
+
+.video--1 .active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.video--1 .active:hover {
+  transition: none;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.hiden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.hatri {
+  background-color: yellowgreen;
+
+  color: white;
+  height: 5rem;
+  width: 30rem;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.hatri h3 {
+  display: inline-block;
+  margin-right: 5%;
+  font-size: 1.7rem;
+}
+
+.fa-plus {
+  cursor: pointer;
+  height: 1rem;
+}
+
+.kontejnercina {
+  margin-bottom: 2rem;
+
+  margin-top: 3rem;
+}
+
+.video--2 {
+  height: 15rem;
+  width: 25rem;
+  margin: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+.video--2 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.video--2 video:hover {
+  transition: 0.2s linear;
+  transform: scale(1.3);
+}
+
+.video--2 .active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.video--2 .active:hover {
+  transition: none;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.video--3 {
+  height: 15rem;
+  width: 25rem;
+  margin: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+.video--3 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.video--3 video:hover {
+  transition: 0.2s linear;
+  transform: scale(1.3);
+}
+
+.video--3 .active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.video--3 .active:hover {
+  transition: none;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.p-tag {
+  text-align: center;
+  font-family: sans;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.logo-slika {
+  height: 100px;
+  width: auto;
+}
+
+footer .item .inner .info .links {
+  margin-top: 1rem;
+}
+footer .links a {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  background-color: #111;
+  border-radius: 50%;
+  color: yellowgreen;
+  text-align: center;
+  line-height: 2rem;
+  margin-left: 0.3rem;
+  font-size: 1.1rem;
+}
+footer .links a:hover {
+  box-shadow: 0 0 0.6rem #fff;
+}
+
+.footer-links {
+  margin-top: 2.5rem;
+  margin-left: 9rem;
+}
+
+footer {
+  display: flex;
+  gap: 15rem;
+}
+
+.btn-footer {
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  border: 0.3rem solid yellowgreen;
+  color: white;
+  margin-top: 1.8rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.btn-footer:hover {
+  background-color: white;
+  color: yellowgreen;
+}
+
+#njemec {
+  color: yellowgreen;
+}
+
+.malo-tebya {
+  margin-left: 3rem;
+}
+
+.trening-header {
+  background: rgba(0, 0, 0, 0.7) url("/images/sipka.jpg");
+  background-size: cover;
+  height: 35rem;
+  background-blend-mode: darken;
+  background-position: center;
+}
+
+.video--4 {
+  height: 15rem;
+  width: 25rem;
+  margin: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+.video--4 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.video--4 .active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.video--4 .active:hover {
+  transition: none;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.video--5 {
+  height: 15rem;
+  width: 25rem;
+  margin: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+.video--5 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.video--5 .active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.video--5 .active:hover {
+  transition: none;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.video--6 {
+  height: 15rem;
+  width: 25rem;
+  margin: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+.video--6 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.video--6 .active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.video--6 .active:hover {
+  transition: none;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.video--7 {
+  height: 15rem;
+  width: 25rem;
+  margin: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+.video--7 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.video--7 .active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.video--7 .active:hover {
+  transition: none;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.carousel-item {
+  height: 25rem;
+  width: 25rem;
+}
+
+/* alooo */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 300px;
+  max-height: 600px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activee,
+.dot:hover {
+  background-color: lightgrey;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  opacity: 100;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.kontejnujem-dva-itema {
+  margin-top: 3rem;
+  display: grid;
+}
+.kontejnujem-dva-itema h1 {
+  font-size: 3rem;
+  padding: 0.5rem;
+  display: inline-block;
+  color: yellowgreen;
+  border-bottom: 0.3rem solid yellowgreen;
+  margin-bottom: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  footer {
+    gap: 2rem;
+  }
+
+  .malo-tebya {
+    margin: 0px;
+  }
+
+  .aloe {
+    margin: 0px;
+  }
+
+  .footer-links {
+    margin: 0px 0px 0px 0px;
+  }
+
+  #naslov {
+    font-size: 1.5rem;
+    margin-top: 9rem;
+  }
+  nav .logo {
+    font-size: 2rem;
+  }
+
+  .lastChild {
+    font-size: 0.8rem;
+  }
+  nav .links .lastChild:hover {
+    font-size: 1rem;
+  }
+}
+.uplatnica {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nevidljivo {
+  display: none;
+}

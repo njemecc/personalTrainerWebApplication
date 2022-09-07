@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.4) URL(images/nesto.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  background-blend-mode: darken;
+}
+
+header {
+  color: white;
+  text-shadow: 2px 2px 2px #000000;
+  text-align: center;
+  font-size: 1rem;
+  width: 40%;
+  margin: 30px auto;
+  background: rgb(99, 99, 99, 0.8);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+header h1 {
+  font-family: sans-serif;
+  letter-spacing: 2px;
+}
+
+#survey-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+  border-radius: 5px;
+  background: rgb(99, 99, 99, 0.8);
+
+  width: 40%;
+  margin: 5px auto;
+  color: white;
+}
+
+.form-field {
+  padding: 10px;
+}
+
+::placeholder {
+  padding: 5px;
+  color: black;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.form-control {
+  width: 100%;
+  height: 2rem;
+  border: 1px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.input-radio,
+.input-checkbox {
+  height: 1rem;
+  width: 1rem;
+  margin: 5px;
+  box-shadow: 1px 1px 1px #000000;
+}
+
+#comments {
+  width: 100%;
+  height: 120px;
+  resize: vertical;
+}
+
+#submit {
+  display: block;
+  width: 80%;
+  margin: auto;
+  font-size: 25px;
+  background: yellowgreen;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+#submit:hover {
+  background: white;
+  color: yellowgreen;
+}
+
+@media (max-width: 1080px) {
+  header,
+  #survey-form {
+    width: 700px;
+  }
+}
+
+@media (max-width: 750px) {
+  header,
+  #survey-form {
+    width: 95%;
+    padding: 0 20px;
+  }
+}
+
+input[type="checkbox"]:checked {
+  accent-color: yellowgreen;
+}
+
+input[type="radio"]:checked {
+  accent-color: yellowgreen;
+}
+
+select {
+  background-color: yellowgreen;
+  color: white;
+  width: 10rem;
+  height: 2rem;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <title>Login Form | CodingLab</title> -->
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="heder-plana">
+      <nav class="login-nav">
+        <div class="logo">
+          Marko<span style="margin-left: 0.3rem">Gligorijević</span>
+        </div>
+        <div class="open"><i class="fas fa-bars"></i></div>
+        <ul class="links">
+          <li id="houm"><a href="index.html">Home</a></li>
+          <li><a href="index.html#plan">Plan</a></li>
+
+          <li><a href="login.html">Log in</a></li>
+          <li><a href="register.html">Register</a></li>
+          <div class="close"><i class="fas fa-times"></i></div>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="wrapper">
+        <div class="title"><span>Ulogujte se</span></div>
+
+        <form action="validation.php" method="POST">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input name="email" type="text" placeholder="Email" required />
+          </div>
+          <div class="row">
+            <i class="fas fa-lock"></i>
+            <input
+              name="password"
+              type="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+
+          <div class="row button">
+            <input name="submit" type="submit" value="Login" />
+          </div>
+          <div class="signup-link">
+            Nemaš nalog? <a href="register.html">Napravi ga</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="login.js"></script>
+  </body>
+</html>
